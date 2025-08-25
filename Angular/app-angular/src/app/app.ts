@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NuevoComponente } from './nuevo-componente/nuevo-componente';
+import { ComponenteEnLineaComponent } from './componente-en-linea/componente-en-linea.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, NuevoComponente, ComponenteEnLineaComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly titulo = ('Hola Mundo desde Angular');
+export class AppComponent {
+  protected readonly titulo = 'Hola Mundo desde Angular';
 }
