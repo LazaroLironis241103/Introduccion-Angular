@@ -4,8 +4,18 @@ import { Component } from '@angular/core';
   selector: 'app-componente-en-linea',
   standalone: true,
   template: `
-    <p>componente-en-linea works!</p>
+  <h1>{{tituloComponenteInline}}</h1>
+    <p>Fuente más grande</p>
   `,
-  styles: ``
+  styles: `
+    h1 {
+      color: blue;
+    }  
+    p {
+      font-size: 20px;
+    }
+  `
 })
-export class ComponenteEnLineaComponent {}  
+export class ComponenteEnLineaComponent {
+  tituloComponenteInline = 'Componente en linea';
+}  
