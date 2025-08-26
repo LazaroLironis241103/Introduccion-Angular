@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-nuevo-componente',
-  imports: [],
+  standalone: true,
   templateUrl: './nuevo-componente.html',
-  styleUrl: './nuevo-componente.css'
+  styleUrls: ['./nuevo-componente.css']
 })
-export class NuevoComponente {
+export class NuevoComponenteComponent {   // <-- renombrar aquí
   tituloNuevoComponente = "Nuevo Componente";
 }
