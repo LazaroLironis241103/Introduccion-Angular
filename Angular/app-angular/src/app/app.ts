@@ -7,14 +7,17 @@ import { Hijo } from "./hijo/hijo";
 import { MostrarMensaje } from "./mostrar-mensaje/mostrar-mensaje";
 import { Replicador } from "./replicador/replicador";
 import { Saludar } from "./saludar/saludar";
+import { ComponenteIf } from "./componente-if/componente-if";
+import { AgregarTarea } from "./agregar-tarea/agregar-tarea";
+import { ComponenteFor } from "./componente-for/componente-for";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NuevoComponenteComponent, ComponenteEnLineaComponent, Padre, Hijo, MostrarMensaje, Replicador, Saludar],
+  imports: [RouterOutlet, NuevoComponenteComponent, ComponenteEnLineaComponent, Padre, Hijo, MostrarMensaje, Replicador, Saludar, ComponenteIf, AgregarTarea, ComponenteFor],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class AppComponent {
-  protected readonly titulo = 'Two-ay Binding';
+  protected readonly titulo = 'Directiva @for en Angular';
 }
