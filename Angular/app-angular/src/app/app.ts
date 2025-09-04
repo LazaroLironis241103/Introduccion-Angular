@@ -19,5 +19,5 @@ import { ComponenteFor } from "./componente-for/componente-for";
   styleUrls: ['./app.css']
 })
 export class AppComponent {
-  protected readonly titulo = 'Directiva @for en Angular';
+  protected readonly titulo = 'Decorador @Output en Angular';
 }
