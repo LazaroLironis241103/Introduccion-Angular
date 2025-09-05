@@ -10,14 +10,15 @@ import { Saludar } from "./saludar/saludar";
 import { ComponenteIf } from "./componente-if/componente-if";
 import { AgregarTarea } from "./agregar-tarea/agregar-tarea";
 import { ComponenteFor } from "./componente-for/componente-for";
+import {  ViewChildComponent } from "./view-child/view-child";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NuevoComponenteComponent, ComponenteEnLineaComponent, Padre, Hijo, MostrarMensaje, Replicador, Saludar, ComponenteIf, AgregarTarea, ComponenteFor],
+  imports: [RouterOutlet, NuevoComponenteComponent, ComponenteEnLineaComponent, Padre, Hijo, MostrarMensaje, Replicador, Saludar, ComponenteIf, AgregarTarea, ComponenteFor, ViewChildComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class AppComponent {
-  protected readonly titulo = 'Decorador @Output en Angular';
+  protected readonly titulo = 'Decorador @ViewChild en Angular';
 }
