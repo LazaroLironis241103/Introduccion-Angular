@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, LOCALE_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NuevoComponenteComponent } from './nuevo-componente/nuevo-componente';
 import { ComponenteEnLineaComponent } from './componente-en-linea/componente-en-linea.component';
@@ -13,16 +13,23 @@ import { ComponenteFor } from "./componente-for/componente-for";
 import {  ViewChildComponent } from "./view-child/view-child";
 import { Mensaje } from './mensaje';
 import { ListadoUsuarios } from "./listado-usuarios/listado-usuarios";
+import { EjemploPipes } from "./ejemplo-pipes/ejemplo-pipes";
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es'; 
+
+//Registramos los datos de localizacion para español
+registerLocaleData(localeEs, 'es');
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NuevoComponenteComponent, ComponenteEnLineaComponent, Padre, Hijo, MostrarMensaje, Replicador, Saludar, ComponenteIf, AgregarTarea, ComponenteFor, ViewChildComponent, ListadoUsuarios],
+  imports: [RouterOutlet, NuevoComponenteComponent, ComponenteEnLineaComponent, Padre, Hijo, MostrarMensaje, Replicador, Saludar, ComponenteIf, AgregarTarea, ComponenteFor, ViewChildComponent, ListadoUsuarios, EjemploPipes],
+  providers: [ {provide: LOCALE_ID, useValue: 'es' }],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class AppComponent {
-  titulo = 'Servicios y Observables en Angular';
+  titulo = 'Ejemplo Pipes en Angular';
 
   mensaje: string | undefined;
 
